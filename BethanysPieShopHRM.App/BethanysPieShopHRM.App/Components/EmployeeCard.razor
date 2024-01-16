@@ -4,17 +4,17 @@
             <h4>@Employee.FirstName @Employee.LastName</h4>
         </div>
         <div class="card-body employee-card text-center">
-            <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{Employee.EmployeeId}.jpg")" class="rounded-circle" />
+
+            <div class="mb-3">
+                <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{Employee.EmployeeId}.jpg")" class="employee-img rounded-circle img-fluid" />
+            </div>
+            <button class="btn btn-primary btn-sm mb-1" @onclick="@(async () => await EmployeeQuickViewClicked.InvokeAsync(Employee))"> Quick view</button>
+            <a href="@($"employeedetail/{Employee.EmployeeId}")" class="btn btn-outline-primary btn-sm mb-1">
+                Full details
+            </a>
+            @*            <button class="btn btn-outline-primary btn-sm mb-1" @onclick="(() => NavigateToDetails(Employee))">
+            Full details
+            </button>*@
         </div>
-        <button class="btn btn-primary btn-sm mb-1"
-                @onclick="@(async () => await EmployeeQuickViewClicked.InvokeAsync(Employee))"
-                > Quick view
-        </button>
-        @* <a href="@($"employeedetail/{Employee.EmployeeId}")" class="btn btn-outline-primary">
-            Full details
-        </a> *@
-        <button class="btn btn-outline-primary btn-sm mb-1" @onclick="(() => NavigateToDetails(Employee))">
-            Full details
-        </button>
     </div>
 </div>
