@@ -2,6 +2,7 @@ using BethanysPieShopHRM.App;
 using BethanysPieShopHRM.App.Services;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -15,5 +16,11 @@ builder.Services.AddHttpClient<IJobCategoryDataService, JobCategoryDataService>(
 builder.Services.AddScoped<ApplicationState>();
 
 builder.Services.AddBlazoredLocalStorage();
+
+builder.Services.AddOidcAuthentication(options =>
+{
+    builder.Configuration.Bind("Auth0", options.ProviderOptions);
+    options.ProviderOptions.ResponseType = "code";
+});
 
 await builder.Build().RunAsync();
