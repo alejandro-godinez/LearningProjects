@@ -4,6 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+
+	<PackageId>My.FirstClassLibrary</PackageId>
+	<Version>0.1.0</Version>
+	<Authors>Alex Godinez</Authors>
+	<Company>Lazy Software</Company>
+	<Description>This is a Razor component library with a cool modal window component.</Description>
   </PropertyGroup>
 
 
