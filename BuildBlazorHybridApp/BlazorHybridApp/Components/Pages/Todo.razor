@@ -1,7 +1,17 @@
 ﻿@page "/todo"
+
 @using BlazorHybridApp.Data
+@using Microsoft.Maui.Storage
+@using System.IO
+@using System.Text.Json
+
 
 <h3>Todo (@todos.Count(todo => !todo.IsDone))</h3>
+
+<button @onclick="Save">Save</button>
+<button @onclick="Load">Load</button>
+<br />
+<br />
 
 <ul class="list-unstyled">
     @foreach (TodoItem todo in todos)
@@ -20,9 +30,33 @@
     private List<TodoItem> todos = new();
     private string? newTodo;
 
+    protected override void OnInitialized()
+    {
+        Load();
+    }
+
     private void AddTodo()
     {
         todos.Add(new TodoItem { Title = newTodo });
         newTodo = string.Empty;
+    }
+
+    private async Task Save()
+    {
+        string contents = JsonSerializer.Serialize(todos);
+        string path = Path.Combine(FileSystem.AppDataDirectory, "todo.json");
+        File.WriteAllText(path, contents);
+        await App.Current.MainPage.DisplayAlert("List Saved", $"List has been saved to {path}", "OK");
+    }
+
+    private void Load()
+    {
+        string path = Path.Combine(FileSystem.AppDataDirectory, "todo.json");
+        if (!File.Exists(path))
+            return;
+        string contents = File.ReadAllText(path);
+        List<TodoItem> savedItems = JsonSerializer.Deserialize<List<TodoItem>>(contents);
+        todos.Clear();
+        todos.AddRange(savedItems);
     }
 }
