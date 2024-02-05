@@ -7,3 +7,4 @@ Repository for projects from learning tutorials
 - [Build Blazor Hybrid App](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/)
 - [GRPC Client Server](https://learn.microsoft.com/en-us/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-8.0&tabs=visual-studio)
 - [Get started querying with Transact-SQL](https://learn.microsoft.com/en-us/training/paths/get-started-querying-with-transact-sql)
+- [Program with Transact-SQL](https://learn.microsoft.com/en-us/training/paths/program-transact-sql/)
