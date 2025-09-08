@@ -10,9 +10,29 @@ Off-white     #f6f6f6
 
 /* GLOBAL STYLES 
 -------------------------------- */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
   background: #f6f6f6;
+}
+
+/* links */
+a {
+  color: #3c8453;
+}
+a:hover {
+  color: #bcaa96;
+  text-decoration: none;
+}
+.btn {
+  background: #3c8453;
+  color: #f6f6f6;
+  text-decoration: none;
 }
 
 /* HOME
@@ -34,3 +54,24 @@ footer{
   background: #222222;
   color: #d3d4d6;
 }
+footer a {
+  color: #bcaa96;
+}
+footer a:hover {
+  color: #3c8453;
+}
+
+.socials {
+  list-style-type: none;
+  padding: 0;
+}
+
+.socials li {
+  display: inline-block;
+}
+
+.socials img {
+  width: 32px;
+
+}
+
