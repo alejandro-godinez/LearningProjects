@@ -106,10 +106,15 @@ a:hover {
 footer{
   background: #222222;
   color: #d3d4d6;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
+
 footer a {
   color: #bcaa96;
 }
+
 footer a:hover {
   color: #3c8453;
 }
@@ -121,10 +126,13 @@ footer a:hover {
 
 .socials li {
   display: inline-block;
+  margin-left: 10px;
 }
 
 .socials img {
   width: 32px;
-
 }
 
+.socials img:hover {
+  opacity: 0.5;
+}
