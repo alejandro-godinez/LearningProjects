@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.content {
+  max-width: 30rem;
+  width: 50vw;
+}
+
+.content img {
+  /* filter: grayscale(50%); */
+  /* filter: contrast(90%) grayscale(50%) saturate(150%); */
+  /* filter: sepia(100%); */
+  /* filter: contrast(90%) sepia(100%); */
+}

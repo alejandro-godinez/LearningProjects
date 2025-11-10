@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.ratio-box {
+  width: 60vw;
+}
+
+.content img {
+  /* clip-path: circle(25% at 0 100%); */
+  clip-path: ellipse(25% 45% at 70% 50%);
+}

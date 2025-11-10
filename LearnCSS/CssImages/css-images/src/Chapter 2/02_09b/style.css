@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  height: 20rem;
+  justify-content: center;
+  max-width: 40rem;
+  width: 60vw;
+}
+
+.content h1 {
+  background: url("../../assets/images/red-berries.jpg");
+  background-size: cover;
+  font-size: 4rem;
+  padding: 2rem;
+  text-align: center;
+}

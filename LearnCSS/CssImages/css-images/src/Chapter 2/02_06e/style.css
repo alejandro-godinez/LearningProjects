@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.content {
+  border: 1rem solid crimson;
+  max-width: 35rem;
+  overflow: hidden;
+  width: 60vw;
+}
+
+.ratio-box {
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.content img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.content img {
+  clip-path: path("M158.73,292.46A85.5,85.5,0,0,1,279.65,171.54l.35.36.35-.36A85.5,85.5,0,0,1,401.27,292.46L280,413.73Z"
+  );
+}

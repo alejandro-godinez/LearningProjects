@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+
+.content img {
+  animation: robot 2s ease-in-out forwards;
+  position: absolute;
+  right: 0;
+  width: 200px;
+}
+
+@keyframes robot {
+  0% {
+    right: 0;
+    rotate: 0;
+  }
+
+  10% {
+    rotate: -20deg;
+  }
+
+  90% {
+    rotate: 0;
+  }
+
+  100% {
+    right: calc(100% - 200px);
+  }
+}

@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.card {
+  border: 3px solid cornflowerblue;
+  width: 40vw;
+}
+
+figcaption {
+  font-family: sans-serif;
+  padding: 1rem;
+  text-align: center;
+}
+
+.translate {
+  translate: 2rem 1rem;
+}
+
+.scale {
+  scale: .5;
+}
+
+.rotate {
+  rotate: -30deg;
+}
+
+.card:nth-of-type(4) {
+  perspective: 5rem;
+
+  .perspective {
+    rotate: x 10deg;
+  }
+
+}
