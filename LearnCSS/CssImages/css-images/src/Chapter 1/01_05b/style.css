@@ -19,12 +19,15 @@ img {
   border: 3px solid hotpink;
   border-radius: 1rem;
   width: 40vw;
+  overflow: hidden;
 }
 
 .image {
-  height: inherit;
+  height: 100%;
   object-fit: cover;
-  width: inherit;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 figcaption {
@@ -33,4 +36,7 @@ figcaption {
 
 .ratio-box {
   width: 100%;
+  height: 0;
+  padding-top: calc(100% * (9/16));
+  position: relative;
 }
