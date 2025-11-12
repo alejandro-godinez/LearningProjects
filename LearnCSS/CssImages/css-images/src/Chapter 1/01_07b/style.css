@@ -5,7 +5,6 @@ body {
 img {
   display: block;
   height: auto;
-  width: 100%;
 }
 
 .container {
@@ -14,8 +13,16 @@ img {
   margin: 2rem;
 }
 
-.content {}
+.content {
+  display: flex;
+}
 
-.content img {}
+.content img {
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+}
 
-figure {}
+figure {
+  width: 25%;
+}
