@@ -6,6 +6,8 @@ img {
   display: block;
   height: auto;
   width: 100%;
+  /* clip-path: inset(10%); */
+  clip-path: inset(10% 20% 30% 40%);
 }
 
 .container {
