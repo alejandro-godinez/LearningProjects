@@ -6,6 +6,8 @@ img {
   display: block;
   height: auto;
   width: 100%;
+  /* clip-path: circle(25% at 50% 50%); */
+  clip-path: ellipse(15% 45%);
 }
 
 .container {
@@ -19,5 +21,4 @@ img {
   width: 60vw;
 }
 
-.content img {
-}
+.content img {}
