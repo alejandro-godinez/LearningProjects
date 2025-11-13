@@ -38,5 +38,6 @@ img {
 }
 
 .content img {
-  clip-path: url("heart.svg#heart");
+  /* clip-path: url("heart.svg#heart"); */
+  mask-image: url(heart.svg);
 }
