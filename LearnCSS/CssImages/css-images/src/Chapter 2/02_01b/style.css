@@ -6,6 +6,11 @@ img {
   display: block;
   height: auto;
   width: 100%;
+  /* border-radius: 4rem; */
+  /* width: 500px;
+  height: 500px;
+  border-radius: 50% 0; */
+  object-fit: cover;
 }
 
 .container {
@@ -17,4 +22,6 @@ img {
 
 .content {
   width: 60vw;
+  border-radius: 20rem;
+  overflow: hidden;
 }
